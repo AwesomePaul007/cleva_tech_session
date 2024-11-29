@@ -1,3 +1,13 @@
+// You are to calculate monthly retention month over month for the data provided
+
+// You can access the data here 
+
+// Write a simple solution with any language of your choice to print out the monthly 
+// retention (number of users retained from the previous month)
+
+
+
+
 const {Client} = require('pg');
 const moment = require('moment');
 // postgres://uddmfcekkt42ui:p539645ff8350c7034e87644aa5dcb3643cc90f141c9c79deacf04cd90dce63bf@cc0gj7hsrh0ht8.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d3ca7csmihkq2t
