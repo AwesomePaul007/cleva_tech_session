@@ -62,7 +62,7 @@ async function dbConnect(){
                 END as month_m_month
 
             FROM TRANSACTIONS 
-            WHERE EXTRACT(YEAR from created_at )
+            WHERE EXTRACT(YEAR from created_at ) = 2024
             GROUP BY MONTH, USER_ID 
             HAVING COUNT(transaction_id) > 1 
 
@@ -74,8 +74,6 @@ async function dbConnect(){
     const query = await conn.query(sql);
     const {rows} = query
     console.table(rows)
-
-
 }
 
 dbConnect()
