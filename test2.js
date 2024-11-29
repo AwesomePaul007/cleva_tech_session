@@ -100,16 +100,16 @@ function traverseRow(data = []){
     }
 
     const sortedgroupByYearMonthKeys = Object.keys(groupByYearMonth).sort();
-    const sortedObject = {};
+    const sortedgroupByYearMonth  = {};
     sortedgroupByYearMonthKeys.forEach(key => {
-        sortedObject[key] = groupByYearMonth[key];
+        sortedgroupByYearMonth[key] = groupByYearMonth[key];
     });
 
     // Final aggregate
     const FinalAggregate = {}
-    for (const key in sortedObject) {
-        if (Object.hasOwnProperty.call(sortedObject, key)) {
-            const row = sortedObject[key];
+    for (const key in sortedgroupByYearMonth) {
+        if (Object.hasOwnProperty.call(sortedgroupByYearMonth, key)) {
+            const row = sortedgroupByYearMonth[key];
             if (row['monthInMonth'] == 'YES'){
 
                 if (FinalAggregate[key.split(':')[0]] ){
@@ -135,17 +135,7 @@ function traverseRow(data = []){
     // │    3    │      100      │
     // │    4    │      100      │
     // └─────────┴───────────────┘
-
-
-
-
-
     
-
-    
-
-
-
 }
 
 dbConnect().catch(console.error);
